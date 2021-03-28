@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Best Anime!</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1>Animes</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+
+
+    <div class="row">
+
+
+      <div>
+        <ul class="animeNames">
+          <% for(var i=0; i<animes.length; i++) {%>
+          <li class="list">
+            <div class="cards">
+              <div class="card">
+                <div class="card__image-holder">
+                  <h2><%= animes[i].name %></h2>
+                  <img class="card__image" src=<%= animes[i].photoUrl %> alt=<%= animes[i].name %> />
+                </div>
+                <div class="card-title">
+                  <button class="voteButton">
+                    Vote here!
+                  </button>
+                  <span>Votes: </span>
+                  <span><%= animes[i].votes %></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <% } %>
+        </ul>
+
+
+
+
+      </div>
+
+      <script src="main.js"></script>
+
+</body>
+
+</html>
